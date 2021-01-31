@@ -52,7 +52,7 @@ An actual example using a repository made for this purpose is:
 docker run -it  \
 --rm \
 batch-poetry:0.1.0 \
-https://github.com/mgvalverde/lifecycle-model.git main -n Edgar
+https://github.com/mgvalverde/poe_model_example.git main -n Edgar
 ```
 
 ### HTTPS git link
@@ -62,7 +62,7 @@ If the repository is public, it must can be provided as followed:
 docker run -it  \
 --rm \
 batch-poetry:0.1.0 \
-https://github.com/mgvalverde/lifecycle-model.git main -n Edgar
+https://github.com/mgvalverde/poe_model_example.git main -n Edgar
 ```
 
 ### SSH git link
@@ -79,7 +79,7 @@ docker run -it  \
 -e SSH_PRV="$(cat $SSH_LOCAL_PATH)" \
 -e SSH_PUB="$(cat $SSH_LOCAL_PATH.pub)" \
 batch-poetry:0.1.0 \
-git@github.com:mgvalverde/lifecycle-model.git main -n Edgar
+git@github.com:mgvalverde/poe_model_example.git main -n Edgar
 ```
 
 They can also be mounted as volumes directly into the container. They must be mounted inside `/home/poe/.ssh/`.
@@ -93,6 +93,6 @@ docker run -it  \
 -v $SSH_LOCAL_PATH:/home/poe/.ssh/ssh-key \
 -v $SSH_LOCAL_PATH.pub:/home/poe/.ssh/ssh-key.pub \
 batch-poetry:0.1.0 \
-git@github.com:mgvalverde/lifecycle-model.git main -n Edgar
+git@github.com:mgvalverde/poe_model_example.git main -n Edgar
 ```
 
